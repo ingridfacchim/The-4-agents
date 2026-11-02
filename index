@@ -1,0 +1,1650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#020a18">
+  <meta name="description" content="Ingrid Cisneiro Facchim — Business and People Leader exploring Big Data and AI in Business. A personal journey through leadership, operations and emerging technology.">
+
+  <title>Ingrid Cisneiro Facchim | Business, Data & AI</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ingrid Cisneiro Facchim | Business, Data & AI">
+  <meta property="og:description" content="Building on years of business and people leadership, exploring how data, technology and AI can transform business decisions and operations.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="">
+
+  <!-- Add og:image later: 1200x630 PNG matching dark theme -->
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Ingrid Cisneiro Facchim | Business, Data & AI">
+  <meta name="twitter:description" content="My journey from business and people leadership into Big Data and AI in Business.">
+  <meta name="twitter:url" content="">
+
+  <!-- Emoji SVG favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='85'%3E%F0%9F%A7%A0%3C/text%3E%3C/svg%3E">
+
+  <!-- Apply saved theme before first paint -->
+  <script>
+    (function () {
+      try {
+        const saved = localStorage.getItem("ingrid-theme");
+        if (saved === "light") {
+          document.documentElement.classList.add("light");
+        }
+      } catch (error) {
+        // Storage may be unavailable; dark mode remains the default.
+      }
+    })();
+  </script>
+
+  <!-- Google Fonts: only external dependency -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;550;600;650;700;750;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: dark;
+
+      --bg: #020a18;
+      --bg-grad: linear-gradient(170deg, #020a18 0%, #041028 40%, #06142e 70%, #020a18 100%);
+      --surface: rgba(8,24,56,0.85);
+      --border: rgba(0,170,255,0.12);
+      --border-glow: rgba(0,170,255,0.3);
+      --text: #d0e0f0;
+      --text-bright: #e8f0ff;
+      --text-dim: #6888aa;
+
+      --neon: #00aaff;
+      --cyan: #00e5ff;
+      --green: #00ff88;
+      --amber: #ffaa00;
+      --red: #ff4466;
+      --purple: #aa66ff;
+
+      --header-bg: rgba(2,10,24,0.78);
+      --grid-color: rgba(130,185,255,0.03);
+      --orb-one: rgba(0,170,255,0.08);
+      --orb-two: rgba(170,102,255,0.08);
+      --orb-three: rgba(0,229,255,0.06);
+      --button-text: #020a18;
+      --soft-surface: rgba(0,170,255,0.045);
+      --shadow: rgba(0,0,0,0.18);
+      --tag-bg: rgba(0,170,255,0.09);
+      --tag-border: rgba(0,170,255,0.18);
+      --timeline-line: rgba(0,170,255,0.19);
+      --hero-highlight: #b7eaff;
+    }
+
+    html.light {
+      color-scheme: light;
+
+      --bg: #eef3fa;
+      --bg-grad: linear-gradient(170deg, #f5f8fd 0%, #e9f1fb 40%, #e5edfa 70%, #f4f7fc 100%);
+      --surface: rgba(255,255,255,0.94);
+      --border: rgba(18,70,120,0.17);
+      --border-glow: rgba(0,95,180,0.32);
+      --text: #344761;
+      --text-bright: #10253f;
+      --text-dim: #5b718d;
+
+      --neon: #0068bb;
+      --cyan: #007f9d;
+      --green: #087f51;
+      --amber: #a46300;
+      --red: #c92e50;
+      --purple: #7543bc;
+
+      --header-bg: rgba(244,248,253,0.88);
+      --grid-color: rgba(27,80,140,0.035);
+      --orb-one: rgba(0,120,215,0.055);
+      --orb-two: rgba(130,80,220,0.045);
+      --orb-three: rgba(0,150,190,0.045);
+      --button-text: #ffffff;
+      --soft-surface: rgba(0,95,180,0.045);
+      --shadow: rgba(22,55,100,0.08);
+      --tag-bg: rgba(0,95,180,0.075);
+      --tag-border: rgba(0,95,180,0.16);
+      --timeline-line: rgba(0,95,180,0.2);
+      --hero-highlight: #005b9d;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 105px;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: "Inter", -apple-system, BlinkMacSystemFont,
+        "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    button:focus-visible,
+    a:focus-visible {
+      outline: 2px solid var(--cyan);
+      outline-offset: 4px;
+    }
+
+    a {
+      color: var(--neon);
+      text-decoration: none;
+      transition: color .2s ease, text-shadow .2s ease;
+    }
+
+    a:hover {
+      color: var(--cyan);
+      text-shadow: 0 0 15px var(--border-glow);
+    }
+
+    ::selection {
+      background: var(--border-glow);
+      color: var(--text-bright);
+    }
+
+    /* BACKGROUND DEPTH */
+
+    .background-gradient {
+      position: fixed;
+      inset: 0;
+      z-index: -4;
+      pointer-events: none;
+      background: var(--bg-grad);
+    }
+
+    .background-grid {
+      position: fixed;
+      inset: 0;
+      z-index: -3;
+      pointer-events: none;
+      background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 60px 60px;
+    }
+
+    .orb-layer {
+      position: fixed;
+      inset: 0;
+      z-index: -2;
+      overflow: hidden;
+      pointer-events: none;
+    }
+
+    .orb {
+      position: absolute;
+      width: 350px;
+      height: 350px;
+      border-radius: 50%;
+      filter: blur(100px);
+      will-change: transform;
+    }
+
+    .orb-one {
+      top: 5%;
+      left: -350px;
+      background: var(--orb-one);
+      animation: orbit-one 24s ease-in-out infinite alternate;
+    }
+
+    .orb-two {
+      top: 45%;
+      right: -350px;
+      background: var(--orb-two);
+      animation: orbit-two 29s ease-in-out infinite alternate;
+    }
+
+    .orb-three {
+      bottom: -220px;
+      left: -350px;
+      background: var(--orb-three);
+      animation: orbit-three 34s ease-in-out infinite alternate;
+    }
+
+    @keyframes orbit-one {
+      from { transform: translate(0,0) rotate(0deg); }
+      to { transform: translate(55px,100px) rotate(30deg); }
+    }
+
+    @keyframes orbit-two {
+      from { transform: translate(0,0) rotate(0deg); }
+      to { transform: translate(-55px,-110px) rotate(-30deg); }
+    }
+
+    @keyframes orbit-three {
+      from { transform: translate(0,0); }
+      to { transform: translate(65px,-100px); }
+    }
+
+    /* SHARED LAYOUT */
+
+    .container {
+      width: 100%;
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    .page-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* HEADER */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--header-bg);
+      border-bottom: 1px solid var(--border);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+    }
+
+    .header-inner {
+      min-height: 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+
+    .header-name {
+      font-size: .88rem;
+      font-weight: 750;
+      letter-spacing: -.035em;
+      color: var(--text-bright);
+      white-space: nowrap;
+    }
+
+    .header-name .dot {
+      color: var(--neon);
+    }
+
+    .header-actions {
+      display: flex;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .icon-button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      width: 39px;
+      height: 39px;
+      padding: 0;
+      border-radius: 11px;
+      border: 1px solid var(--border);
+      color: var(--text);
+      background: var(--soft-surface);
+      cursor: pointer;
+      transition: border-color .2s ease,
+        color .2s ease, transform .2s ease;
+    }
+
+    .icon-button:hover {
+      border-color: var(--border-glow);
+      color: var(--cyan);
+      transform: translateY(-2px);
+    }
+
+    .icon-button svg {
+      width: 19px;
+      height: 19px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .sun-icon {
+      display: block;
+    }
+
+    .moon-icon {
+      display: none;
+    }
+
+    html.light .sun-icon {
+      display: none;
+    }
+
+    html.light .moon-icon {
+      display: block;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 100px 0 77px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 25px;
+      color: var(--green);
+      font-size: .72rem;
+      font-weight: 750;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--green);
+      box-shadow: 0 0 12px var(--green);
+    }
+
+    .hero h1 {
+      margin: 0;
+      max-width: 790px;
+      font-size: clamp(3.1rem, 7.4vw, 5.65rem);
+      line-height: 1.06;
+      letter-spacing: -.07em;
+      font-weight: 800;
+      color: var(--text-bright);
+    }
+
+    .hero h1 .surname {
+      display: block;
+      color: var(--hero-highlight);
+    }
+
+    .role-line {
+      margin: 26px 0 29px;
+      font-size: clamp(.92rem, 2.3vw, 1.07rem);
+      font-weight: 650;
+      color: var(--cyan);
+      letter-spacing: -.015em;
+    }
+
+    .role-separator {
+      color: var(--text-dim);
+      margin: 0 7px;
+    }
+
+    .hero-statement {
+      margin: 0 0 34px;
+      max-width: 730px;
+      font-size: clamp(1.22rem, 3vw, 1.65rem);
+      line-height: 1.55;
+      font-weight: 450;
+      letter-spacing: -.025em;
+      color: var(--text);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .primary-cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 14px 22px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      color: var(--button-text);
+      background: var(--neon);
+      font-size: .9rem;
+      font-weight: 750;
+      line-height: 1.4;
+      box-shadow: 0 6px 26px rgba(0,170,255,.12);
+      transition: transform .2s ease,
+        background .2s ease, box-shadow .2s ease;
+    }
+
+    .primary-cta:hover {
+      color: var(--button-text);
+      background: var(--cyan);
+      text-shadow: none;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px var(--border-glow);
+    }
+
+    .primary-cta svg {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 2;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+
+    .hero-location {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      font-size: .82rem;
+      color: var(--text-dim);
+    }
+
+    .hero-location svg {
+      width: 15px;
+      height: 15px;
+      fill: none;
+      stroke: currentColor;
+      stroke-width: 1.7;
+    }
+
+    /* INTRO */
+
+    .content-intro {
+      padding: 48px 0 24px;
+    }
+
+    .section-overline {
+      margin: 0 0 9px;
+      color: var(--neon);
+      font-size: .7rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: .18em;
+    }
+
+    .content-intro h2 {
+      margin: 0;
+      color: var(--text-bright);
+      font-size: 1.7rem;
+      letter-spacing: -.045em;
+      font-weight: 750;
+    }
+
+    .content-intro p:last-child {
+      margin: 9px 0 0;
+      color: var(--text-dim);
+      font-size: .9rem;
+    }
+
+    /* COLLAPSIBLE SECTIONS */
+
+    .sections {
+      padding-bottom: 70px;
+    }
+
+    .section-card {
+      margin: 16px 0;
+      overflow: hidden;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      box-shadow: 0 8px 28px var(--shadow);
+      transition: border-color .25s ease,
+        box-shadow .25s ease;
+    }
+
+    .section-card:hover {
+      border-color: var(--border-glow);
+    }
+
+    .section-toggle {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      padding: 23px 25px;
+      border: 0;
+      background: transparent;
+      color: var(--text-bright);
+      text-align: left;
+      cursor: pointer;
+      gap: 17px;
+    }
+
+    .section-number {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+      border: 1px solid var(--border-glow);
+      border-radius: 50%;
+      background: var(--soft-surface);
+      color: var(--neon);
+      font-size: .76rem;
+      font-weight: 750;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .section-title {
+      flex: 1;
+      font-size: clamp(1rem, 2.7vw, 1.2rem);
+      font-weight: 750;
+      letter-spacing: -.035em;
+    }
+
+    .section-sign {
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 26px;
+      height: 26px;
+      flex-shrink: 0;
+      color: var(--text-dim);
+    }
+
+    .section-sign::before,
+    .section-sign::after {
+      content: "";
+      position: absolute;
+      background: currentColor;
+      border-radius: 2px;
+      transition: transform .25s ease,
+        opacity .25s ease;
+    }
+
+    .section-sign::before {
+      width: 14px;
+      height: 2px;
+    }
+
+    .section-sign::after {
+      width: 2px;
+      height: 14px;
+      transform: rotate(90deg);
+      opacity: 0;
+    }
+
+    .section-card.closed .section-sign::after {
+      transform: rotate(0deg);
+      opacity: 1;
+    }
+
+    .section-panel {
+      display: grid;
+      grid-template-rows: 1fr;
+      opacity: 1;
+      transition: grid-template-rows .36s ease,
+        opacity .28s ease;
+    }
+
+    .section-card.closed .section-panel {
+      grid-template-rows: 0fr;
+      opacity: 0;
+    }
+
+    .section-panel-inner {
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .section-content {
+      padding: 0 25px 27px 78px;
+      border-top: 1px solid transparent;
+    }
+
+    .section-content p {
+      margin: 0 0 17px;
+    }
+
+    .section-content p:last-child {
+      margin-bottom: 0;
+    }
+
+    .section-content strong {
+      color: var(--text-bright);
+      font-weight: 650;
+    }
+
+    .section-lead {
+      color: var(--text-bright);
+      font-size: 1.01rem;
+      line-height: 1.75;
+    }
+
+    .accent-text {
+      color: var(--cyan);
+    }
+
+    .small-heading {
+      margin: 26px 0 13px;
+      font-size: .75rem;
+      font-weight: 750;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--neon);
+    }
+
+    /* TAGS */
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 5px 11px;
+      border: 1px solid var(--tag-border);
+      border-radius: 6px;
+      background: var(--tag-bg);
+      color: var(--text);
+      font-size: .75rem;
+      font-weight: 550;
+    }
+
+    /* TIMELINE */
+
+    .timeline {
+      position: relative;
+      padding-left: 24px;
+      margin: 10px 0 0;
+      border-left: 1px solid var(--timeline-line);
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 25px 0;
+    }
+
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: -29px;
+      top: 7px;
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: var(--neon);
+      box-shadow: 0 0 0 4px var(--surface);
+    }
+
+    .timeline-date {
+      display: block;
+      margin-bottom: 4px;
+      color: var(--text-dim);
+      font-size: .76rem;
+      font-weight: 650;
+    }
+
+    .timeline-role {
+      display: block;
+      color: var(--text-bright);
+      font-size: .98rem;
+      font-weight: 700;
+    }
+
+    .timeline-company {
+      display: block;
+      margin: 2px 0 7px;
+      color: var(--cyan);
+      font-size: .8rem;
+      font-weight: 600;
+    }
+
+    .timeline-item p {
+      margin: 5px 0 0;
+      font-size: .88rem;
+      line-height: 1.7;
+    }
+
+    /* ACHIEVEMENT CARDS */
+
+    .achievement-list {
+      display: grid;
+      gap: 13px;
+      margin-top: 18px;
+    }
+
+    .achievement {
+      padding: 18px 19px;
+      border: 1px solid var(--border);
+      border-radius: 11px;
+      background: var(--soft-surface);
+    }
+
+    .achievement-top {
+      display: flex;
+      align-items: flex-start;
+      gap: 11px;
+      margin-bottom: 9px;
+    }
+
+    .achievement-marker {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 27px;
+      height: 27px;
+      flex-shrink: 0;
+      border-radius: 8px;
+      background: var(--tag-bg);
+      color: var(--green);
+      font-size: .8rem;
+      font-weight: 750;
+    }
+
+    .achievement h3 {
+      margin: 0;
+      color: var(--text-bright);
+      font-size: .95rem;
+      line-height: 1.5;
+      font-weight: 700;
+    }
+
+    .achievement p {
+      margin: 0;
+      font-size: .87rem;
+      line-height: 1.75;
+    }
+
+    /* EDUCATION */
+
+    .education-item {
+      padding: 17px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .education-item:first-child {
+      padding-top: 0;
+    }
+
+    .education-item:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .education-status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 8px;
+      color: var(--green);
+      font-size: .72rem;
+      font-weight: 750;
+      text-transform: uppercase;
+      letter-spacing: .09em;
+    }
+
+    .education-item h3 {
+      margin: 0 0 5px;
+      font-size: .98rem;
+      line-height: 1.55;
+      color: var(--text-bright);
+      font-weight: 700;
+    }
+
+    .education-item p {
+      margin: 0;
+      font-size: .85rem;
+      color: var(--text-dim);
+    }
+
+    /* FUTURE DIRECTION */
+
+    .direction-list {
+      display: grid;
+      gap: 14px;
+      margin: 20px 0;
+    }
+
+    .direction-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 13px;
+    }
+
+    .direction-icon {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      border: 1px solid var(--tag-border);
+      border-radius: 9px;
+      color: var(--cyan);
+      background: var(--tag-bg);
+      font-weight: 750;
+      font-size: .83rem;
+    }
+
+    .direction-item strong {
+      display: block;
+      margin: 1px 0 3px;
+      font-size: .9rem;
+    }
+
+    .direction-item p {
+      margin: 0;
+      font-size: .86rem;
+    }
+
+    .closing-thought {
+      margin-top: 25px;
+      padding: 19px 20px;
+      border-left: 3px solid var(--neon);
+      border-radius: 0 9px 9px 0;
+      background: var(--soft-surface);
+      color: var(--text-bright);
+      font-size: .93rem;
+      font-weight: 500;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+
+    .site-footer {
+      border-top: 1px solid var(--border);
+      padding: 29px 0 38px;
+    }
+
+    .footer-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 10px 20px;
+      color: var(--text-dim);
+      font-size: .75rem;
+    }
+
+    .footer-inner strong {
+      color: var(--text);
+      font-weight: 650;
+    }
+
+    .footer-mark {
+      color: var(--neon);
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 600px) {
+      .header-inner {
+        min-height: 64px;
+      }
+
+      .header-name {
+        font-size: .78rem;
+        letter-spacing: -.04em;
+      }
+
+      .header-actions {
+        gap: 7px;
+      }
+
+      .icon-button {
+        width: 36px;
+        height: 36px;
+      }
+
+      .hero {
+        padding: 72px 0 59px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.65rem, 11vw, 4rem);
+      }
+
+      .role-line {
+        line-height: 1.9;
+      }
+
+      .role-separator {
+        margin: 0 4px;
+      }
+
+      .hero-statement {
+        font-size: 1.2rem;
+      }
+
+      .content-intro {
+        padding-top: 37px;
+      }
+
+      .section-toggle {
+        padding: 19px 17px;
+        gap: 12px;
+      }
+
+      .section-number {
+        width: 32px;
+        height: 32px;
+      }
+
+      .section-content {
+        padding: 0 18px 23px 18px;
+      }
+
+      .section-title {
+        font-size: 1.02rem;
+      }
+
+      .sections {
+        padding-bottom: 45px;
+      }
+
+      .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 370px) {
+      .header-name {
+        font-size: .7rem;
+      }
+
+      .header-actions {
+        gap: 5px;
+      }
+
+      .icon-button {
+        width: 33px;
+        height: 33px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Decorative background layers -->
+  <div class="background-gradient" aria-hidden="true"></div>
+  <div class="background-grid" aria-hidden="true"></div>
+  <div class="orb-layer" aria-hidden="true">
+    <div class="orb orb-one"></div>
+    <div class="orb orb-two"></div>
+    <div class="orb orb-three"></div>
+  </div>
+
+  <!-- Sticky header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="header-name" href="#top" aria-label="Ingrid Cisneiro Facchim, back to top">
+        Ingrid Cisneiro Facchim<span class="dot">.</span>
+      </a>
+
+      <div class="header-actions">
+        <button
+          class="icon-button"
+          id="theme-toggle"
+          type="button"
+          title="Switch to light mode"
+          aria-label="Switch to light mode"
+        >
+          <!-- Sun -->
+          <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <circle cx="12" cy="12" r="4"></circle>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+          </svg>
+
+          <!-- Moon -->
+          <svg class="moon-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.9 13A9 9 0 0 1 11 3.1 9 9 0 1 0 20.9 13Z"></path>
+          </svg>
+        </button>
+
+        <button
+          class="icon-button"
+          id="expand-toggle"
+          type="button"
+          title="Collapse all sections"
+          aria-label="Collapse all sections"
+          aria-expanded="true"
+        >
+          <svg id="collapse-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M4 9h16M4 15h16M8 5l4-3 4 3M8 19l4 3 4-3"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="page-content" id="top">
+    <div class="container">
+
+      <!-- HERO -->
+      <section class="hero" aria-labelledby="hero-name">
+        <div class="eyebrow">
+          <span class="eyebrow-dot"></span>
+          My professional & learning journey
+        </div>
+
+        <h1 id="hero-name">
+          Ingrid Cisneiro
+          <span class="surname">Facchim.</span>
+        </h1>
+
+        <p class="role-line">
+          Business & People Leader
+          <span class="role-separator">/</span>
+          Big Data and AI in Business Student
+        </p>
+
+        <p class="hero-statement">
+          Building on years of business and people leadership,
+          I'm exploring how data, technology and AI can transform
+          the way businesses make decisions and operate.
+        </p>
+
+        <div class="hero-actions">
+          <a class="primary-cta" href="#my-journey">
+            Explore my journey
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M5 12h14M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+
+          <span class="hero-location">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 10c0 5-8 12-8 12S4 15 4 10a8 8 0 1 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="2.5"></circle>
+            </svg>
+            Dublin, Ireland
+          </span>
+        </div>
+      </section>
+
+      <!-- SECTION INTRO -->
+      <div class="content-intro" id="my-journey">
+        <p class="section-overline">The story so far</p>
+        <h2>Experience meets curiosity.</h2>
+        <p>Five chapters of my professional background and learning journey.</p>
+      </div>
+
+      <!-- COLLAPSIBLE CONTENT -->
+      <div class="sections" id="sections">
+
+        <!-- 01 ABOUT ME -->
+        <section class="section-card" id="about-me" aria-labelledby="title-1">
+          <button class="section-toggle" type="button" aria-expanded="true" aria-controls="panel-1">
+            <span class="section-number">01</span>
+            <span class="section-title" id="title-1">About Me</span>
+            <span class="section-sign" aria-hidden="true"></span>
+          </button>
+
+          <div class="section-panel" id="panel-1">
+            <div class="section-panel-inner">
+              <div class="section-content">
+                <p class="section-lead">
+                  I'm a business and people leader with almost seven years
+                  of progressive management experience at
+                  <strong>Nespresso</strong>, supported by a
+                  <strong>Bachelor's Degree in Business</strong>.
+                </p>
+
+                <p>
+                  My professional background spans operations,
+                  commercial performance, people leadership,
+                  compliance, business continuity and cross-site support.
+                  I've used business data and KPIs to guide decisions,
+                  identify opportunities and improve day-to-day performance.
+                </p>
+
+                <p>
+                  I'm now transitioning into
+                  <span class="accent-text">data and AI-driven business</span>,
+                  building on practical experience in operations and
+                  leadership with formal study in Big Data and AI.
+                </p>
+
+                <p>
+                  I'm particularly interested in how data, technology
+                  and AI can improve business decisions, efficiency
+                  and performance.
+                </p>
+
+                <div class="tags" aria-label="Areas of experience and interest">
+                  <span class="tag">Business Operations</span>
+                  <span class="tag">People Leadership</span>
+                  <span class="tag">Data & KPIs</span>
+                  <span class="tag">Power BI</span>
+                  <span class="tag">Process Improvement</span>
+                  <span class="tag">Big Data & AI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 02 PROFESSIONAL JOURNEY -->
+        <section class="section-card" id="professional-journey" aria-labelledby="title-2">
+          <button class="section-toggle" type="button" aria-expanded="true" aria-controls="panel-2">
+            <span class="section-number">02</span>
+            <span class="section-title" id="title-2">My Professional Journey</span>
+            <span class="section-sign" aria-hidden="true"></span>
+          </button>
+
+          <div class="section-panel" id="panel-2">
+            <div class="section-panel-inner">
+              <div class="section-content">
+                <p>
+                  My journey at Nespresso took me from Coffee Specialist
+                  to Boutique Manager, with increasing responsibility
+                  for teams, operations, business performance
+                  and cross-boutique support.
+                </p>
+
+                <h3 class="small-heading">Nespresso · Dublin, Ireland</h3>
+
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <span class="timeline-date">Sep 2022 – May 2024</span>
+                    <span class="timeline-role">Boutique Manager / Boutique Leader</span>
+                    <span class="timeline-company">Nespresso · Dundrum</span>
+                    <p>
+                      Led daily operations and a 14-person team,
+                      balancing commercial performance, customer
+                      experience, people development and compliance.
+                      Used Power BI, sales data and KPIs to support
+                      decisions. Mentored three supervisors and
+                      managed recruitment, workforce planning,
+                      development plans and internal audits.
+                    </p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-date">Aug 2020 – Sep 2022</span>
+                    <span class="timeline-role">Boutique Assistant Manager</span>
+                    <span class="timeline-company">Nespresso · Dundrum</span>
+                    <p>
+                      Managed daily operations, team performance
+                      and trading priorities. Supported business
+                      continuity during COVID-19 and developed a
+                      Learning & Development continuity plan,
+                      training new trainers and delegating responsibilities.
+                    </p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-date">Oct 2017 – Aug 2020</span>
+                    <span class="timeline-role">Senior Coffee Specialist / Boutique Supervisor</span>
+                    <span class="timeline-company">Nespresso · Dundrum</span>
+                    <p>
+                      Supervised trading priorities, sales performance,
+                      brand standards and daily operations. Led staff
+                      induction, training and campaign rollouts,
+                      and maintained business continuity during
+                      manager absence.
+                    </p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-date">Jun 2017 – Oct 2017</span>
+                    <span class="timeline-role">Coffee Specialist</span>
+                    <span class="timeline-company">Nespresso · Dundrum</span>
+                    <p>
+                      Supported the initial boutique setup and opening,
+                      built customer relationships and worked towards
+                      commercial KPIs.
+                    </p>
+                  </div>
+                </div>
+
+                <h3 class="small-heading">Earlier Experience</h3>
+
+                <div class="timeline">
+                  <div class="timeline-item">
+                    <span class="timeline-date">2016 – 2017</span>
+                    <span class="timeline-role">Reception / Supervisor</span>
+                    <span class="timeline-company">L'Imbarcadero Hostel · Venice, Italy</span>
+                    <p>
+                      Supervised reception and housekeeping,
+                      coordinated rotas and bookings, and supported
+                      an international guest environment.
+                    </p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-date">2014 – 2016</span>
+                    <span class="timeline-role">Sales Associate / Jewellery Specialist</span>
+                    <span class="timeline-company">TK Maxx · Dublin, Ireland</span>
+                    <p>
+                      Worked in customer service and luxury jewellery,
+                      managing stock, deliveries and visual merchandising.
+                      Selected for the Rising Star trainee programme.
+                    </p>
+                  </div>
+
+                  <div class="timeline-item">
+                    <span class="timeline-date">2011 – 2013</span>
+                    <span class="timeline-role">Co-owner / Manager</span>
+                    <span class="timeline-company">Cisneiro's Beauty Centre · Brazil</span>
+                    <p>
+                      Developed the business plan and managed daily
+                      operations of a beauty centre with 14 professionals,
+                      including suppliers, purchasing and administration.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 03 PROJECTS & ACHIEVEMENTS -->
+        <section class="section-card" id="projects" aria-labelledby="title-3">
+          <button class="section-toggle" type="button" aria-expanded="true" aria-controls="panel-3">
+            <span class="section-number">03</span>
+            <span class="section-title" id="title-3">Projects & Achievements</span>
+            <span class="section-sign" aria-hidden="true"></span>
+          </button>
+
+          <div class="section-panel" id="panel-3">
+            <div class="section-panel-inner">
+              <div class="section-content">
+                <p>
+                  These experiences reflect the practical side of
+                  my work: taking responsibility, adapting to
+                  changing circumstances and supporting people
+                  and operations.
+                </p>
+
+                <div class="achievement-list">
+
+                  <article class="achievement">
+                    <div class="achievement-top">
+                      <span class="achievement-marker">01</span>
+                      <h3>Progression & People Leadership</h3>
+                    </div>
+                    <p>
+                      Progressed from Coffee Specialist to Boutique
+                      Manager at Nespresso, leading a 14-person team,
+                      mentoring three supervisors and managing
+                      commercial performance, operations and compliance.
+                    </p>
+                  </article>
+
+                  <article class="achievement">
+                    <div class="achievement-top">
+                      <span class="achievement-marker">02</span>
+                      <h3>COVID-19 Business Continuity & Online Fulfilment Hub</h3>
+                    </div>
+                    <p>
+                      Supported Nespresso's COVID-19 Business Continuity
+                      & Online Fulfilment Hub in 2020, coordinating
+                      operations during boutique closures and helping
+                      lead the flagship boutique's reopening.
+                    </p>
+                  </article>
+
+                  <article class="achievement">
+                    <div class="achievement-top">
+                      <span class="achievement-marker">03</span>
+                      <h3>Cross-Boutique Operational Support</h3>
+                    </div>
+                    <p>
+                      Supported managers and supervisors across
+                      Nespresso boutiques in Ireland with operational
+                      processes, systems, audits, stock management
+                      and training.
+                    </p>
+                  </article>
+
+                </div>
+
+                <h3 class="small-heading">Skills Applied</h3>
+
+                <div class="tags">
+                  <span class="tag">Business Continuity</span>
+                  <span class="tag">Team Development</span>
+                  <span class="tag">Operational Audits</span>
+                  <span class="tag">Stakeholder Management</span>
+                  <span class="tag">Training</span>
+                  <span class="tag">Cross-Site Support</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 04 LEARNING JOURNEY -->
+        <section class="section-card" id="learning" aria-labelledby="title-4">
+          <button class="section-toggle" type="button" aria-expanded="true" aria-controls="panel-4">
+            <span class="section-number">04</span>
+            <span class="section-title" id="title-4">My Learning Journey</span>
+            <span class="section-sign" aria-hidden="true"></span>
+          </button>
+
+          <div class="section-panel" id="panel-4">
+            <div class="section-panel-inner">
+              <div class="section-content">
+                <p class="section-lead">
+                  My current focus is connecting practical business
+                  experience with formal study in
+                  <span class="accent-text">Big Data and AI</span>.
+                </p>
+
+                <p>
+                  With a foundation in business management,
+                  I'm developing my understanding of how emerging
+                  technologies can support better decisions
+                  and more effective operations.
+                </p>
+
+                <h3 class="small-heading">Education & Development</h3>
+
+                <div class="education-item">
+                  <span class="education-status">
+                    <span class="eyebrow-dot"></span>
+                    Current Studies
+                  </span>
+                  <h3>Certificate in Big Data and AI in Business: Strategy and Emerging Trends</h3>
+                  <p>National College of Ireland (NCI) · Started September 2026</p>
+                </div>
+
+                <div class="education-item">
+                  <h3>Bachelor's Degree in Business</h3>
+                  <p>State University of Maringá (UEM), Brazil · 2008–2012</p>
+                </div>
+
+                <div class="education-item">
+                  <h3>Certificate in Business Management</h3>
+                  <p>SEDA College, Dublin, Ireland · 2014</p>
+                </div>
+
+                <h3 class="small-heading">Areas I'm Exploring</h3>
+
+                <div class="tags">
+                  <span class="tag">Big Data</span>
+                  <span class="tag">Artificial Intelligence</span>
+                  <span class="tag">Business Strategy</span>
+                  <span class="tag">Data-Driven Decisions</span>
+                  <span class="tag">Emerging Trends</span>
+                  <span class="tag">Business Efficiency</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 05 LOOKING FORWARD -->
+        <section class="section-card" id="looking-forward" aria-labelledby="title-5">
+          <button class="section-toggle" type="button" aria-expanded="true" aria-controls="panel-5">
+            <span class="section-number">05</span>
+            <span class="section-title" id="title-5">Looking Forward</span>
+            <span class="section-sign" aria-hidden="true"></span>
+          </button>
+
+          <div class="section-panel" id="panel-5">
+            <div class="section-panel-inner">
+              <div class="section-content">
+                <p class="section-lead">
+                  I'm building on my experience in operations
+                  and leadership while developing new skills
+                  in data and emerging technologies.
+                </p>
+
+                <p>
+                  My goal is to connect the practical understanding
+                  I've gained from managing teams and business
+                  operations with the opportunities offered by
+                  Big Data and AI.
+                </p>
+
+                <div class="direction-list">
+
+                  <div class="direction-item">
+                    <span class="direction-icon">01</span>
+                    <div>
+                      <strong>Connect business and technology</strong>
+                      <p>
+                        Explore how data and AI can support
+                        real operational and commercial decisions.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="direction-item">
+                    <span class="direction-icon">02</span>
+                    <div>
+                      <strong>Improve decision-making</strong>
+                      <p>
+                        Build on my experience using business
+                        data and KPIs to identify opportunities
+                        and improve performance.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="direction-item">
+                    <span class="direction-icon">03</span>
+                    <div>
+                      <strong>Keep learning and developing</strong>
+                      <p>
+                        Continue developing my knowledge of
+                        Big Data, AI and emerging business technologies.
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="closing-thought">
+                  I'm interested in applying data, technology and AI
+                  to improve business decisions, efficiency and
+                  performance — while continuing to learn
+                  and build on my experience.
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>
+        &copy; <span id="current-year">2026</span>
+        <strong>Ingrid Cisneiro Facchim</strong>
+      </span>
+
+      <span>
+        Built with the <span class="footer-mark">AI Badge</span>
+      </span>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      const root = document.documentElement;
+      const themeButton = document.getElementById("theme-toggle");
+      const expandButton = document.getElementById("expand-toggle");
+      const sectionCards = Array.from(
+        document.querySelectorAll(".section-card")
+      );
+
+      // THEME MANAGEMENT
+
+      function updateThemeButton() {
+        const isLight = root.classList.contains("light");
+        const label = isLight
+          ? "Switch to dark mode"
+          : "Switch to light mode";
+
+        themeButton.setAttribute("title", label);
+        themeButton.setAttribute("aria-label", label);
+
+        const themeMeta = document.querySelector(
+          'meta[name="theme-color"]'
+        );
+
+        if (themeMeta) {
+          themeMeta.setAttribute(
+            "content",
+            isLight ? "#f5f8fd" : "#020a18"
+          );
+        }
+      }
+
+      themeButton.addEventListener("click", function () {
+        const isLight = root.classList.toggle("light");
+
+        try {
+          localStorage.setItem(
+            "ingrid-theme",
+            isLight ? "light" : "dark"
+          );
+        } catch (error) {
+          // Theme still works if storage is unavailable.
+        }
+
+        updateThemeButton();
+      });
+
+      updateThemeButton();
+
+      // COLLAPSIBLE SECTIONS
+
+      function setSectionOpen(card, open) {
+        const toggle = card.querySelector(".section-toggle");
+        const panel = card.querySelector(".section-panel");
+
+        card.classList.toggle("closed", !open);
+        toggle.setAttribute("aria-expanded", String(open));
+
+        // Inert prevents keyboard navigation into closed panels.
+        if ("inert" in panel) {
+          panel.inert = !open;
+        }
+      }
+
+      function allSectionsOpen() {
+        return sectionCards.every(function (card) {
+          return !card.classList.contains("closed");
+        });
+      }
+
+      function updateExpandButton() {
+        const allOpen = allSectionsOpen();
+        const label = allOpen
+          ? "Collapse all sections"
+          : "Expand all sections";
+
+        expandButton.setAttribute("title", label);
+        expandButton.setAttribute("aria-label", label);
+        expandButton.setAttribute(
+          "aria-expanded",
+          String(allOpen)
+        );
+      }
+
+      sectionCards.forEach(function (card) {
+        const toggle = card.querySelector(".section-toggle");
+
+        // All sections open by default.
+        setSectionOpen(card, true);
+
+        toggle.addEventListener("click", function () {
+          const isOpen = !card.classList.contains("closed");
+
+          setSectionOpen(card, !isOpen);
+          updateExpandButton();
+        });
+      });
+
+      expandButton.addEventListener("click", function () {
+        const shouldOpen = !allSectionsOpen();
+
+        sectionCards.forEach(function (card) {
+          setSectionOpen(card, shouldOpen);
+        });
+
+        updateExpandButton();
+      });
+
+      updateExpandButton();
+
+      // OPEN SECTION WHEN NAVIGATING TO ITS ANCHOR
+
+      function openHashTarget() {
+        const hash = window.location.hash;
+
+        if (!hash) return;
+
+        let id;
+
+        try {
+          id = decodeURIComponent(hash.slice(1));
+        } catch (error) {
+          return;
+        }
+
+        const target = document.getElementById(id);
+
+        if (!target) return;
+
+        const card = target.classList.contains("section-card")
+          ? target
+          : target.closest(".section-card");
+
+        if (card) {
+          setSectionOpen(card, true);
+          updateExpandButton();
+        }
+      }
+
+      window.addEventListener("hashchange", openHashTarget);
+      openHashTarget();
+
+      // FOOTER YEAR
+
+      document.getElementById("current-year").textContent =
+        new Date().getFullYear();
+    })();
+  </script>
+</body>
+</html>
